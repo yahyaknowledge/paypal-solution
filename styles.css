@@ -1,0 +1,204 @@
+/* Ensure full height for the body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background: #0d0d0d; /* Dark background for better contrast */
+  color: #e0e0e0; /* Lighter gray for text */
+  position: relative; /* Required for the effects to stay fixed during scroll */
+}
+
+/* Mouse Effect Styling */
+.mouse-effect {
+  position: fixed;  /* Keep it fixed in the viewport */
+  pointer-events: none; /* Prevent it from blocking interactions */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.7);
+  transition: transform 0.1s ease-out; /* Smooth transition */
+  transform: scale(0);  /* Start small */
+  z-index: 9999;  /* Ensure it stays on top */
+}
+
+/* Click Effect Styling */
+.click-effect {
+  position: fixed; /* Keep it fixed in the viewport */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.7);
+  pointer-events: none;
+  animation: clickEffectAnimation 0.5s ease-out;
+  transform: scale(1);
+}
+
+@keyframes clickEffectAnimation {
+  0% {
+    transform: scale(1); /* Initial size */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3); /* Expand the click effect */
+    opacity: 0;
+  }
+}
+
+/* General Header Styles */
+h1, h2, h3 {
+  color: #1f1f1f; /* Futuristic blue for headers */
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+  color: rgb(255, 255, 255); /* Change the color to white */
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff; /* Change the color to white */
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Corrected CTA Section Text */
+.cta-text {
+  background-color: #ffffff; /* PayPal yellow for background */
+  color: #1f1f1f; /* Ensure text color remains unchanged */
+  padding: 10px; /* Padding for spacing around the text */
+  font-size: 1.2em; /* Adjust the font size if needed */
+  font-weight: bold; /* Bold text */
+}
+.cta p {
+  color: #ffffff;
+}
+
+/* Smooth transition on hover */
+.cta button {
+  background: #0070BA;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover state - smooth expansion */
+.cta button:hover {
+  background: #005EA6;
+  transform: scale(1.05); /* Slightly increases the size */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Reduced glowing effect */
+}
+
+/* Click state - adding effect for feedback */
+.cta button:active {
+  transform: scale(0.98); /* Slightly reduces size on click */
+  background: #004b8d; /* Darkens the color slightly to indicate the click */
+  box-shadow: 0 4px 10px #00000033; /* Adds a shadow for effect */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.hero .cta-button {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 40px rgba(0, 255, 255, 1); }
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.benefit img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 10px cyan);
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  color: #1f1f1f; /* Darker text for better visibility */
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.trustee {
+  background-color: #28a745; /* Green color for trust */
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  margin: 30px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.trustee img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;  /* Use flexbox to display images side by side */
+  justify-content: center; /* Center align the images */
+  gap: 20px; /* Optional gap between images */
+  margin-bottom: 20px; /* Space below the images */
+}
+
+.image-side {
+  width: 45%;  /* Adjust the size of the images as needed */
+  height: auto;
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f; /* Dark footer for contrast */
+  color: #e0e0e0; /* Light gray text for footer */
+}

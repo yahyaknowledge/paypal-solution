@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Solution Kit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #009cde;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #005EA6, #0070BA);
+            color: white;
+            padding: 40px 15%;
+            text-align: center;
+            border-bottom: 4px solid #003D7C;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.4rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: #000000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta button {
+            background: #0070BA;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta button:hover {
+            background: #005EA6;
+        }
+        .trustee {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.1rem;
+            color: green;
+            font-style: italic;
+        }
+        .section {
+            margin: 70px 0;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #003D7C;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .feature h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+        .feature p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        .testimonials {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .testimonial {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+        }
+        .faq {
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h4 {
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #0070BA;
+            transition: color 0.3s ease;
+        }
+        .faq-item h4:hover {
+            color: #005EA6;
+        }
+        .faq-item p {
+            display: none;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        .faq-item.open p {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #005EA6;
+            color: white;
+            font-size: 1rem;
+        }
+
+        /* Mouse and Click effects */
+        .mouse-effect, .click-effect {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            animation: scaleEffect 1s ease-out;
+        }
+
+        @keyframes scaleEffect {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unlock Your Financial Freedom</h1>
+        <h2 class="cta-text">Solve PayPal Issues Once and For All!</h2>
+    </header>
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <style>
+            .small-lock-icon {
+                font-size: 0.6em; /* Adjust as needed */
+            }
+        </style>
+    <section class="section">
+        <!-- Images Side by Side -->
+        <div class="image-container">
+            <img src="C:/Users/mybtl/Documents/pypl codes/im/pypl.png" alt="PayPal Image 1" class="image-side">
+            <img src="C:/Users/mybtl/Documents/pypl codes/im/pyplsolution.png" alt="PayPal Solution Image" class="image-side">
+        </div>
+    
+        <!-- Trusted by thousands of users -->
+        <p class="trustee">Trusted by thousands of users worldwide. Your PayPal solution is in safe hands with us.</p>
+    </section>    
+
+    <div class="container">
+
+        <!-- Why Choose Our Solution Section -->
+        <section class="section">
+            <h2>Why Choose Our Solution?</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Step-by-Step Video Guide</h3>
+                    <p>Watch as we walk you through the exact process to resolve PayPal limitations.</p>
+                </div>
+                <div class="feature">
+                    <h3>Permanent Solution</h3>
+                    <p>No temporary fixes! This is a lifetime solution.</p>
+                </div>
+                <div class="feature">
+                    <h3>One-Time Purchase</h3>
+                    <p>Pay once and get unlimited access. No recurring charges!</p>
+                </div>
+                <div class="feature">
+                    <h3>Instant Access</h3>
+                    <p>Start resolving PayPal issues immediately after purchase.</p>
+                </div>
+                <div class="feature">
+                    <h3>Money-Back Guarantee</h3>
+                    <p>Your satisfaction is our priority. Full refund if it doesn’t work for you.</p>
+                </div>
+                <div class="feature">
+                    <h3>Limited-Time Offer</h3>
+                    <p>Act now to secure this solution at the current price!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get the Kit Now Section -->
+        <section class="cta">
+                <h2>Get the Kit Now</h2>
+                <p>Take control of your PayPal account with our proven solution.</p>
+                <button>Buy Now</button>
+        </section>
+        
+        <section class="section testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>“This solution saved my business! Highly recommended.”</p>
+                <p>- Alex M.</p>
+            </div>
+            <div class="testimonial">
+                <p>“Quick, easy, and effective. Couldn’t be happier with the results.”</p>
+                <p>- Sarah L.</p>
+            </div>
+            <div class="testimonial">
+                <p>“This is exactly what I needed. The guide was so clear, and now my PayPal account is fully functional!”</p>
+                <p>- John R.</p>
+            </div>
+            <div class="testimonial">
+                <p>“I was skeptical at first, but this solution really works. Worth every penny.”</p>
+                <p>- Emily S.</p>
+            </div>
+            <div class="testimonial">
+                <p>“I’ve tried other solutions, but this one was the only one that actually resolved the issue. Highly recommend!”</p>
+                <p>- Michael T.</p>
+            </div>
+            <div class="testimonial">
+                <p>“Fantastic service! The video was super easy to follow, and the support team was responsive when I had questions.”</p>
+                <p>- Linda G.</p>
+            </div>
+        </section>
+    
+
+        <section class="section faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>How soon will I see results?</h4>
+                <p>Most customers see results within hours of following our guide.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is this solution legal?</h4>
+                <p>Yes, our method is completely legal and compliant with PayPal policies.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I get a refund if it doesn’t work?</h4>
+                <p>Absolutely! We offer a 30-day full money-back guarantee.
+                    If the solution doesn’t work for you, you can request a refund within 30 days of purchase. You’ll receive a full refund, no questions asked.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+    </head>
+    <header>
+        <p>Google Certified Secured Site <i class="fa fa-lock small-lock-icon"></i><p>
+    </header>
+
+
+        <p>&copy; 2024 Yahya Knowledge. All Rights Reserved.</p>
+            <p>This site is secured with HTTPS, ensuring that all your data is encrypted and safe.</p>
+            <p>We care about your privacy and security.</p>
+        
+    
+        
+    </footer>
+
+    <script>
+        document.addEventListener("mousemove", function (e) {
+            let mouseEffect = document.createElement("div");
+            mouseEffect.classList.add("mouse-effect");
+            document.body.appendChild(mouseEffect);
+            mouseEffect.style.top = `${e.clientY - 25}px`;
+            mouseEffect.style.left = `${e.clientX - 25}px`;
+            setTimeout(() => {
+                mouseEffect.remove();
+            }, 1000);
+        });
+
+        document.addEventListener("click", function (e) {
+            let clickEffect = document.createElement("div");
+            clickEffect.classList.add("click-effect");
+            document.body.appendChild(clickEffect);
+            clickEffect.style.top = `${e.clientY - 20}px`;
+            clickEffect.style.left = `${e.clientX - 20}px`;
+            setTimeout(() => {
+                clickEffect.remove();
+            }, 500);
+        });
+
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.addEventListener('click', function() {
+                item.classList.toggle('open');
+            });
+        });
+        
+        
+
+        
+    </script>
+</body>
+</html>
