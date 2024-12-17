@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #004080;
+            color: #fff;
+            padding: 20px 10px;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .container h1 {
+            color: #004080;
+        }
+        .video-wrapper {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 5px;
+        }
+        .cta {
+            margin-top: 20px;
+        }
+        .cta button {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta button:hover {
+            background-color: #002f5f;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Purchase!</h1>
+    </header>
+    <div class="container">
+        <h1>Your Video Is Ready to Stream</h1>
+        <p>We appreciate your purchase! Enjoy your exclusive video below:</p>
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/I8QTeQqQ5DE" 
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="cta">
+            <button onclick="window.location.href='https://discord.gg/U3sw3xQMYa';">Need Help? Contact Support</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Yahya Knowledge. All rights reserved.
+    </footer>
+</body>
+</html>
