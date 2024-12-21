@@ -4,80 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You for Your Purchase</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("hMPlXJFBsvEiN-DYj"); // Initialize EmailJS with your Public Key
+        })();
+
+        function sendEmail(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById("emailInput").value.trim();
+            if (!emailInput || !validateEmail(emailInput)) {
+                alert("Please enter a valid email address!");
+                return;
+            }
+
+            const templateParams = {
+                user_email: emailInput,
+                product_link: "https://youtu.be/I8QTeQqQ5DE"
+            };
+
+            emailjs
+                .send("service_y0fgjuh", "template_n1xizkd", templateParams)
+                .then(
+                    function(response) {
+                        alert("Email sent successfully!");
+                        document.getElementById("emailInput").value = '';
+                    },
+                    function(error) {
+                        alert(`Failed to send email. Error: ${error.text || "Unknown error"}`);
+                    }
+                );
+        }
+
+        function validateEmail(email) {
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+    </script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #0f3460, #16213e);
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 2px solid #00b4d8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #00b4d8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #d1d1d1;
+            margin-bottom: 20px;
             text-align: center;
         }
-        header {
-            background-color: #004080;
-            color: #fff;
-            padding: 20px 10px;
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .container h1 {
-            color: #004080;
-        }
-        .video-wrapper {
-            margin: 20px 0;
-        }
+
         iframe {
+            display: block;
             width: 100%;
-            height: 315px;
-            border-radius: 5px;
-        }
-        .cta {
-            margin-top: 20px;
-        }
-        .cta button {
-            background-color: #004080;
-            color: white;
-            padding: 10px 20px;
+            max-width: 720px;
+            height: 405px;
             border: none;
-            font-size: 1em;
+            border-radius: 12px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="email"] {
+            padding: 15px;
+            width: calc(100% - 30px);
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 8px;
+            border: 1px solid #00b4d8;
+            font-size: 1.1em;
+            display: block;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            background-color: #00b4d8;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
+            transition: background-color 0.3s;
+            font-weight: bold;
         }
-        .cta button:hover {
-            background-color: #002f5f;
+
+        button:hover {
+            background-color: #0077b6;
         }
+
+        .support-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff4b5c;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .support-button:hover {
+            background-color: #e63946;
+        }
+
         footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+            text-align: center;
+            color: #d1d1d1;
+            font-size: 1em;
+            margin-top: 40px;
+            padding: 10px;
+            background: #1a1a2e;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Thank You for Your Purchase!</h1>
-    </header>
+    <div class="header">Thank You for Your Purchase</div>
     <div class="container">
-        <h1>Your Video Is Ready to Stream</h1>
+        <h1>Your Purchase is Confirmed</h1>
         <p>We appreciate your purchase! Enjoy your exclusive video below:</p>
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/I8QTeQqQ5DE" 
-            frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="cta">
-            <button onclick="window.location.href='https://discord.gg/U3sw3xQMYa';">Need Help? Contact Support</button>
-        </div>
+        <iframe src="https://www.youtube.com/embed/I8QTeQqQ5DE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Don't lose access to your product! Enter your email below to securely receive it at your mailing address.</p>
+        <form onsubmit="sendEmail(event)">
+            <input type="email" id="emailInput" placeholder="Enter your email address" required>
+            <button type="submit">Send Email</button>
+        </form>
+        <p style="text-align: center; color: #888;">We value your privacy and will not share your email address with third parties.</p>
     </div>
+    <a href="https://discord.com/invite/U3sw3xQMYa" class="support-button" target="_blank">Contact Support</a>
     <footer>
-        &copy; 2024 Yahya Knowledge. All rights reserved.
+        © 2024 Yahya Knowledge. All rights reserved.
     </footer>
 </body>
 </html>
