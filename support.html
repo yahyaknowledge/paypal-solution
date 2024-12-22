@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #ffffff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #0f3460, #16213e);
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 2px solid #00b4d8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #00b4d8;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #d1d1d1;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #d1d1d1;
+            margin-bottom: 8px;
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            width: calc(100% - 20px);
+            max-width: 500px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #00b4d8;
+            font-size: 1em;
+            background: #1a1a2e;
+            color: #ffffff;
+        }
+
+        button {
+            padding: 12px 30px;
+            background-color: #00b4d8;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0077b6;
+        }
+
+        .support-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff4b5c;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .support-button:hover {
+            background-color: #e63946;
+        }
+
+        footer {
+            text-align: center;
+            color: #d1d1d1;
+            font-size: 1em;
+            margin-top: 40px;
+            padding: 10px;
+            background: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Support</div>
+    <div class="container">
+        <h1>How can we help you?</h1>
+        <p>If you have any questions or need assistance, feel free to contact us. We're here to help!</p>
+
+        <form action="mailto:yahsolvecontact@yahoo.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p>We respect your privacy and will not share your email with third parties.</p>
+    </div>
+    <a href="https://discord.com/invite/U3sw3xQMYa" class="support-button" target="_blank">Contact Support</a>
+    <footer>
+        © 2024 Yahya Knowledge. All rights reserved.
+    </footer>
+</body>
+</html>
